@@ -1,22 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Dropdown data
-    const industries = ["Agriculture", "Technology", "Healthcare", "Retail"];
-    const markets = ["Europe", "Asia", "North America", "Australia"];
-    const certifications = ["ISO 9001", "ISO 14001", "ISO 45001", "ISO 22000"];
+document.getElementById("match-form").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    // Function to populate a dropdown
-    function populateDropdown(dropdownId, options) {
-        const dropdown = document.getElementById(dropdownId);
-        options.forEach(optionText => {
-            const option = document.createElement("option");
-            option.value = optionText;
-            option.textContent = optionText;
-            dropdown.appendChild(option);
-        });
-    }
+    const industry = document.getElementById("industry").value;
+    const market = document.getElementById("market").value;
+    const certifications = document.getElementById("certifications").value;
 
-    // Populate all dropdowns
-    populateDropdown("industry", industries);
-    populateDropdown("market", markets);
-    populateDropdown("certifications", certifications);
+    alert(
+        `Finding matches for:\nIndustry: ${industry}\nTarget Market: ${market}\nCertifications: ${certifications}`
+    );
 });
