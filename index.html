@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SME Trade Platform</title>
+    <title>ABC Marketplace</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -11,78 +11,54 @@
     <!-- Header Section -->
     <header class="header">
         <div class="logo">
-            <img src="logo.png" alt="SME TradeConnect Logo" class="logo-img">
-            <span>SME TradeConnect</span>
+            <img src="logo.png" alt="ABC Marketplace Logo">
         </div>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#dashboard">🏠 Dashboard</a></li>
-                <li><a href="#products">🛒 Products</a></li>
-                <li><a href="#match">🔍 Perfect Match</a></li>
-                <li><a href="#trade-policy">📊 Trade Policies</a></li>
-                <li><a href="#messages">💬 Messages</a></li>
-                <li><a href="#profile">👤 Profile</a></li>
-            </ul>
-        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button>🔍</button>
+        </div>
+        <div class="header-icons">
+            <span>👤 Login / Sign Up</span>
+            <span>❤ Wishlist</span>
+            <span>🛒 Cart</span>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Find Your Perfect Trade Match</h1>
-        <p>Connecting SMEs with global opportunities.</p>
-        <a href="#dashboard" class="cta">Get Started</a>
-    </section>
-
-    <!-- Dashboard Section -->
-    <section id="dashboard" class="dashboard">
+    <!-- Main Content -->
+    <main class="main-content">
         <aside class="sidebar">
+            <h3>All Categories</h3>
             <ul>
-                <li class="active"><a href="#products">🛒 Products</a></li>
-                <li><a href="#match">🔍 Perfect Match</a></li>
-                <li><a href="#trade-policy">📊 Trade Policies</a></li>
-                <li><a href="#messages">💬 Messages</a></li>
-                <li><a href="#profile">👤 Profile</a></li>
+                <li>Pet Supplies</li>
+                <li>Cell Phones & Video Surveillance</li>
+                <li>Electronics & Industrial</li>
+                <li>Sports & Outdoors</li>
+                <li>Health & Beauty</li>
+                <li>Shoes & Accessories</li>
+                <li>Home & Garden</li>
+                <li>Toys & Gifts</li>
+                <li>Jewelry & Watches</li>
             </ul>
         </aside>
-        <div class="main">
-            <h2>Welcome to Your Dashboard</h2>
-            <img src="dashboard.jpg" alt="Dashboard Illustration" class="dashboard-img">
-            <p>Explore trade opportunities and global markets.</p>
-        </div>
-    </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <h2>Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="product1.jpg" alt="Organic Spices" class="product-img">
-                <h3>Organic Spices</h3>
-                <p>Price: $500 per batch</p>
-                <button>Request Quote</button>
+        <section class="carousel">
+            <div class="carousel-item">
+                <img src="promo1.jpg" alt="Promo 1">
             </div>
-            <div class="product-card">
-                <img src="product2.jpg" alt="Handcrafted Textiles" class="product-img">
-                <h3>Handcrafted Textiles</h3>
-                <p>Price: $800 per lot</p>
-                <button>Request Quote</button>
+            <div class="carousel-item">
+                <img src="promo2.jpg" alt="Promo 2">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Perfect Match Section -->
-    <section id="match" class="match">
-        <h2>Perfect Match & Situation Analyzer</h2>
-        <form id="match-form">
-            <label for="industry">Industry:</label>
-            <input type="text" id="industry" placeholder="e.g., Agriculture" required>
-            <label for="market">Target Market:</label>
-            <input type="text" id="market" placeholder="e.g., Europe" required>
-            <label for="certifications">Certifications:</label>
-            <input type="text" id="certifications" placeholder="e.g., ISO 9001">
-            <button type="submit">Find Match</button>
-        </form>
-        <div id="match-results"></div>
-    </section>
+        <aside class="promo-sidebar">
+            <div class="promo-box">
+                <h3>Welcome to ABC Marketplace!</h3>
+                <p>$20 Coupon Pack</p>
+                <button>Get Now</button>
+                <button>Join Free</button>
+                <button>Sign In</button>
+            </div>
+        </aside>
+    </main>
 </body>
 </html>
