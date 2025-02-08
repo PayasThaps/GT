@@ -1,35 +1,111 @@
-/* Reset and base styles for dropdown */
-select {
-    appearance: none; /* Remove default browser dropdown styles */
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    color: #333;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.header {
     width: 100%;
+    height: 60vh;
+    background: url('banner.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.sign-up-btn {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
-/* Styling the dropdown on hover and focus */
-select:hover {
-    background-color: #f0f0f0;
+.sign-up-btn:hover {
+    background: #e55a00;
 }
 
-select:focus {
-    outline: 2px solid #4e54c8;
-    background-color: #fff;
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-/* Optional: container styling for alignment */
-.form-control {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
+.banner h1 {
+    font-size: 3rem;
     font-weight: bold;
-    color: #4e54c8;
+}
+
+.banner p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Main Content */
+.sidebar {
+    width: 20%;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.dashboard-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard-item {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
 }
