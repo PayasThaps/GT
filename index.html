@@ -6,166 +6,31 @@
     <title>ABC Marketplace</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4e54c8, #8f94fb);
-            color: #333;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-icons span {
-            margin-left: 15px;
-            cursor: pointer;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .search-bar input {
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .search-bar button {
-            padding: 5px 10px;
-            border: none;
-            background-color: #4e54c8;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .main-content {
-            display: flex;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        .sidebar {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar h3 {
-            margin-bottom: 15px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-        }
-
-        .sidebar ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .dashboard {
-            flex-grow: 1;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .dashboard-item {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-control {
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-control label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-control select {
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            cursor: pointer;
-        }
-
-        .products {
-            margin-top: 20px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .product-card {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card button {
-            margin-top: 10px;
-            padding: 5px 10px;
-            border: none;
-            background-color: #4e54c8;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="ABC Marketplace Logo">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for products...">
-            <button>🔍</button>
-        </div>
-        <div class="header-icons">
-            <span>👤 Login / Sign Up</span>
-            <span>❤ Wishlist</span>
-            <span>🛒 Cart</span>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="ABC Marketplace Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">All Categories</a></li>
+                <li><a href="#">Featured Selections</a></li>
+                <li><a href="#">Trade Assurance</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Become a Supplier</a></li>
+            </ul>
+            <div class="user-actions">
+                <span>🌎 Deliver to: US</span>
+                <span>🛒</span>
+                <span>👤 Login</span>
+                <button class="sign-up-btn">Sign Up</button>
+            </div>
+        </nav>
+        <div class="banner">
+            <h1>The leading B2B ecommerce platform for global trade</h1>
+            <p>Learn about ABC Marketplace</p>
         </div>
     </header>
 
@@ -196,36 +61,26 @@
                 <div class="dashboard-item">
                     <h3>Perfect Match</h3>
                     <form id="match-form">
-                        <div class="form-control">
-                            <label for="industry">Industry:</label>
-                            <select id="industry" required>
-                                <option value="">Select Industry</option>
-                                <option value="Agriculture">Agriculture</option>
-                                <option value="Technology">Technology</option>
-                                <option value="Healthcare">Healthcare</option>
-                                <option value="Retail">Retail</option>
-                            </select>
-                        </div>
-                        <div class="form-control">
-                            <label for="market">Target Market:</label>
-                            <select id="market" required>
-                                <option value="">Select Market</option>
-                                <option value="Europe">Europe</option>
-                                <option value="Asia">Asia</option>
-                                <option value="North America">North America</option>
-                                <option value="Australia">Australia</option>
-                            </select>
-                        </div>
-                        <div class="form-control">
-                            <label for="certifications">Certifications:</label>
-                            <select id="certifications">
-                                <option value="">Select Certification</option>
-                                <option value="ISO 9001">ISO 9001</option>
-                                <option value="HACCP">HACCP</option>
-                                <option value="FDA">FDA Approved</option>
-                                <option value="CE Mark">CE Mark</option>
-                            </select>
-                        </div>
+                        <label for="industry">Industry:</label>
+                        <select id="industry">
+                            <option value="agriculture">Agriculture</option>
+                            <option value="technology">Technology</option>
+                            <option value="fashion">Fashion</option>
+                        </select>
+
+                        <label for="market">Target Market:</label>
+                        <select id="market">
+                            <option value="europe">Europe</option>
+                            <option value="asia">Asia</option>
+                            <option value="america">America</option>
+                        </select>
+
+                        <label for="certifications">Certifications:</label>
+                        <select id="certifications">
+                            <option value="iso9001">ISO 9001</option>
+                            <option value="iso14001">ISO 14001</option>
+                            <option value="ce">CE Certification</option>
+                        </select>
                         <button type="submit">Find Match</button>
                     </form>
                 </div>
