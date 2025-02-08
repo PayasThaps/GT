@@ -104,6 +104,25 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+        .form-control {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-control label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-control select {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
         .products {
             margin-top: 20px;
         }
@@ -177,12 +196,36 @@
                 <div class="dashboard-item">
                     <h3>Perfect Match</h3>
                     <form id="match-form">
-                        <label for="industry">Industry:</label>
-                        <input type="text" id="industry" placeholder="e.g., Agriculture" required>
-                        <label for="market">Target Market:</label>
-                        <input type="text" id="market" placeholder="e.g., Europe" required>
-                        <label for="certifications">Certifications:</label>
-                        <input type="text" id="certifications" placeholder="e.g., ISO 9001">
+                        <div class="form-control">
+                            <label for="industry">Industry:</label>
+                            <select id="industry" required>
+                                <option value="">Select Industry</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Technology">Technology</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Retail">Retail</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label for="market">Target Market:</label>
+                            <select id="market" required>
+                                <option value="">Select Market</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Asia">Asia</option>
+                                <option value="North America">North America</option>
+                                <option value="Australia">Australia</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label for="certifications">Certifications:</label>
+                            <select id="certifications">
+                                <option value="">Select Certification</option>
+                                <option value="ISO 9001">ISO 9001</option>
+                                <option value="HACCP">HACCP</option>
+                                <option value="FDA">FDA Approved</option>
+                                <option value="CE Mark">CE Mark</option>
+                            </select>
+                        </div>
                         <button type="submit">Find Match</button>
                     </form>
                 </div>
