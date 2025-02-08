@@ -41,24 +41,45 @@
             </ul>
         </aside>
 
-        <section class="carousel">
-            <div class="carousel-item">
-                <img src="promo1.jpg" alt="Promo 1">
-            </div>
-            <div class="carousel-item">
-                <img src="promo2.jpg" alt="Promo 2">
+        <section class="dashboard">
+            <h2>Welcome to Your Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-item">
+                    <h3>Top Deals</h3>
+                    <img src="promo1.jpg" alt="Promo 1">
+                </div>
+                <div class="dashboard-item">
+                    <h3>Perfect Match</h3>
+                    <form id="match-form">
+                        <label for="industry">Industry:</label>
+                        <input type="text" id="industry" placeholder="e.g., Agriculture" required>
+                        <label for="market">Target Market:</label>
+                        <input type="text" id="market" placeholder="e.g., Europe" required>
+                        <label for="certifications">Certifications:</label>
+                        <input type="text" id="certifications" placeholder="e.g., ISO 9001">
+                        <button type="submit">Find Match</button>
+                    </form>
+                </div>
             </div>
         </section>
 
-        <aside class="promo-sidebar">
-            <div class="promo-box">
-                <h3>Welcome to ABC Marketplace!</h3>
-                <p>$20 Coupon Pack</p>
-                <button>Get Now</button>
-                <button>Join Free</button>
-                <button>Sign In</button>
+        <section class="products">
+            <h2>Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Organic Spices">
+                    <h3>Organic Spices</h3>
+                    <p>Price: $500 per batch</p>
+                    <button>Request Quote</button>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Handcrafted Textiles">
+                    <h3>Handcrafted Textiles</h3>
+                    <p>Price: $800 per lot</p>
+                    <button>Request Quote</button>
+                </div>
             </div>
-        </aside>
+        </section>
     </main>
 </body>
 </html>
